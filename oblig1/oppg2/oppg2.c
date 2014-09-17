@@ -10,7 +10,7 @@
 
 
 unsigned char* buffer = NULL;   // Using character types as numbers
-long fileSize = NULL;
+long fileSize = 0;
 
 
 // Read file
