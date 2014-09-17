@@ -70,7 +70,7 @@ int encode_file(char *output_file) {
 
         // For each char in buffer
         for(i = 0; i < strlen(buffer); i++) {
-            char hex = 0;
+            char hex = 0;               // Hexadecimal with 0x-prefix
         
             if (buffer[i] == ' ')       // ' ' (blank)      = 00 = 0x0
                 hex = 0x0;
@@ -115,6 +115,7 @@ void decode_file() {
     for(i = 0; i < fileSize; i++) {
         // Count to four
         for(bit = 1; bit < 5; bit++) {
+            // Shift bits right
             if (bit == 1)
                 printf("%c", chars[buffer[i] >> 6]);
 
